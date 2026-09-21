@@ -1,0 +1,19 @@
+[package]
+name = "codemap"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+winit = "0.30"
+wgpu = "30"
+glyphon = "0.12"
+bytemuck = { version = "1", features = ["derive"] }
+jwalk = "0.9"
+rayon = "1"
+memchr = "2"
+pollster = "0.4"
+png = "0.17"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
